@@ -30,7 +30,7 @@ int main()
         }
     }
 
-    cout << ans;
+    cout << ans << endl;
 
     return 0;
 }
