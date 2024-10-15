@@ -5,7 +5,7 @@ int UniqueSearch(int array[], int size);
 
 int main()
 {
-    int array[] = {1, 2, 3, 4, 1, 2, 3};
+    int array[] = {1, 2, 3, 4, 1, 2, 3 };
     int size = sizeof(array) / sizeof(array[0]);
 
     int unique = UniqueSearch(array, size);
@@ -20,12 +20,12 @@ int main()
 
 int UniqueSearch(int array[], int size)
 {
-    for (int i = 0; i < size - 1; i++)
+    for (int i = 0; i < size; i++)
     {
         bool unique = true;
-        for (int j = i + 1; j < size; j++)
+        for (int j = 0; j < size; j++)
         {
-            if (array[i] == array[j])
+            if (i != j && array[i] == array[j])
             {
                 unique = false;
                 break;
