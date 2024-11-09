@@ -9,15 +9,16 @@ int main()
     for (int i = 0; i < size - 1; i++)
     {
         bool sorted = true;
-        for (int j = i + 1; j < size; j++)
+        for (int j = 0; j < size - 1 - i; j++)
         {
-            if (array[i] > array[j]){
-                swap(array[i], array[j]);
+            if (array[j] > array[j + 1])
+            {
+                swap(array[j], array[j + 1]);
                 sorted = false;
             }
         }
-        if(sorted == true)
-        break;
+        if (sorted == true)
+            break;
     }
 
     for (int i = 0; i < size; i++)
