@@ -6,29 +6,25 @@ void insertionSort(vector<int> &arr)
 {
     int n = arr.size();
 
-    // Traverse through 1 to n-1
     for (int i = 1; i < n; i++)
     {
-        int key = arr[i];//current
-        int j = i - 1;//previous
+        int current = arr[i];
+        int previous = i - 1;
 
-        // Move elements of arr[0..i-1], that are greater than key,
-        // to one position ahead of their current position
-        while (j >= 0 && arr[j] > key)
+        while (previous >= 0 && arr[previous] > current)
         {
-            arr[j + 1] = arr[j];
-            j--;
+            arr[previous + 1] = arr[previous];
+            previous--;
         }
-        arr[j + 1] = key;
+        arr[previous + 1] = current;
     }
 }
 
 void printArray(const vector<int> &arr)
 {
     for (int num : arr)
-    {
         cout << num << " ";
-    }
+
     cout << endl;
 }
 
