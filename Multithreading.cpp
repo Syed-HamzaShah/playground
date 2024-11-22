@@ -3,8 +3,7 @@
 #include <mutex>
 
 using namespace std;
-int a,b;
-
+int a = 9, b = 7;
 
 mutex mux;
 
@@ -36,9 +35,6 @@ void mult()
 }
 int main()
 {
-
-cout<<"Enter two number:";
-cin>>a>>b;
     thread t1(add);
     thread t2(sub);
     thread t3(divide);

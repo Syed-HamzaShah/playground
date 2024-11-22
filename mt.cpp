@@ -18,6 +18,6 @@ int main()
     t1.join();
     t2.join();
 
-    cout<<"t1 and t2 are successfully simulated"<<endl;
+    cout << "t1 and t2 are successfully simulated" << endl;
     return 0;
 }
