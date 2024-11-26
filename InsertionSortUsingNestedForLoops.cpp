@@ -25,7 +25,6 @@ void insertionSort(vector<int> &arr)
             }
         }
 
-        // If the key is the smallest element, we need to place it at the start
         if (arr[0] > key)
         {
             arr[0] = key;
