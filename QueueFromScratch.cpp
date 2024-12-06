@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-void en_queue(int array[], int &end, int capacity, int &value)
+void en_queue(int array[], int &end, int capacity, int value)
 {
-    if (end == capacity)
+    if (end == capacity - 1)
         cout << "The Queue is Full!" << endl;
     else
     {
-        array[end] = value;
         end++;
+        array[end] = value;
         cout << "Value Added!" << endl;
     }
 }
@@ -17,7 +17,7 @@ void de_queue(int array[], int &start, int &end)
 {
     if (start == -1 && end == -1)
         cout << "The Queue is Empty!" << endl;
-    else if (start == 0 && end == 0)
+    else if (end == 0)
     {
         end--;
         start--;
@@ -25,7 +25,7 @@ void de_queue(int array[], int &start, int &end)
     }
     else
     {
-        for (int i = 0; i < end; i++)
+        for (int i = 0; i <= end; i++)
         {
             array[i] = array[i + 1];
         }
@@ -36,8 +36,8 @@ void de_queue(int array[], int &start, int &end)
 
 void display(int array[], int start, int end)
 {
-    for (int i = start; i < end; i++)
-        cout << array[i] << ends;
+    for (int i = start; i <= end; i++)
+        cout << array[i] << ' ';
     cout << endl;
 }
 
@@ -46,7 +46,7 @@ int main()
     int capacity = 10;
     int array[capacity] = {1, 2, 3, 4, 5};
     int start = 0;
-    int end = 5;
+    int end = 4;
     int value = 2;
 
     display(array, start, end);
@@ -55,11 +55,17 @@ int main()
     de_queue(array, start, end);
     display(array, start, end);
     de_queue(array, start, end);
+    display(array, start, end);
     de_queue(array, start, end);
+    display(array, start, end);
     de_queue(array, start, end);
+    display(array, start, end);
     de_queue(array, start, end);
+    display(array, start, end);
     de_queue(array, start, end);
+    display(array, start, end);
     de_queue(array, start, end);
+    display(array, start, end);
     de_queue(array, start, end);
 
     return 0;
