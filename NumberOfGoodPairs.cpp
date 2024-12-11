@@ -1,5 +1,5 @@
 #include <vector>
-#include <algorithm>
+#include <unordered_map>
 using namespace std;
 
 class Solution
@@ -7,16 +7,18 @@ class Solution
 public:
     int numIdenticalPairs(vector<int> &nums)
     {
-        sort(nums.begin(), nums.end());
+        unordered_map<int, int> count;
         int ans = 0;
-        for (int i = 0; i < nums.size(); i++)
+
+        for (int num : nums)
         {
-            for (int j = i + 1; j < nums.size(); j++)
+            if (count.find(num) != count.end())
             {
-                if (nums[i] == nums[j] && i < j)
-                    ans++;
+                ans += count[num];
             }
+            count[num]++;
         }
+
         return ans;
     }
 };
