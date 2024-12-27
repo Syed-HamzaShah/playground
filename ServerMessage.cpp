@@ -1,5 +1,6 @@
 #include <windows.h>
 #include <iostream>
+#include <conio.h>
 #include <string>
 
 #define PIPE_NAME "\\\\.\\pipe\\MyPipe"
