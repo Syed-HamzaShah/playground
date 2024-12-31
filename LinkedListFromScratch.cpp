@@ -5,21 +5,100 @@ using namespace std;
 struct Node
 {
     int data;
-    int *link;
+    Node *link;
+    Node(int data = 0, Node *link = NULL) {}
+    Node(int d, Node *l = NULL)
+    {
+        data = d;
+    }
+    Node(int d, Node *l)
+    {
+        data = d;
+        link = l;
+    }
+
+    void insert(int d, Node *l)
+    {
+        data = d;
+        link = l;
+    }
 };
+
+void deletionFromStart(Node *head)
+{
+    if (head->link == NULL)
+    {
+        cout << "Deletion Not possible" << endl;
+        return;
+    }
+
+    Node *prev = head;
+    Node *current;
+
+    current = head->link;
+    delete prev;
+    head = current;
+}
+
+void deletionFromEnd(Node *head)
+{
+    if (head->link == NULL)
+    {
+        cout << "Deletion Not possible" << endl;
+        return;
+    }
+
+    Node *prev = head;
+    Node *current = prev->link;
+
+    while (current->link != NULL)
+    {
+        prev = prev->link;
+        current = current->link;
+    }
+
+    delete current;
+    prev->link = NULL;
+}
+
+void deletionFromMiddle(int value, Node *head)
+{
+    Node *prev;
+    Node *curr = head;
+    Node *next;
+
+    if (head->link == NULL)
+    {
+        cout << "Deletion Not possible" << endl;
+        return;
+    }
+
+    while (curr->data != value)
+    {
+        if (curr->link == NULL)
+            return;
+
+        prev = curr;
+        curr = curr->link;
+    }
+    next = curr->link;
+    delete curr;
+    prev = next;
+}
 
 int main()
 {
-    vector<Node> n;
+    Node *head = NULL;
+    int size, value;
 
-    Node n1;
-    n1.data = 2;
-    n1.link = NULL;
+    cout << "Enter the size of the linked list: " << endl;
+    cin >> size;
 
-    int *curr;
-    int *prev;
-    int *start;
-
-    curr, start, prev = &n1;
+    for (int i = 0; i < size; i++)
+    {
+        cout << "Enter the value : ";
+        cin >> value;
+        Node = new Node(value,head);}
+    }
     return 0;
 }
