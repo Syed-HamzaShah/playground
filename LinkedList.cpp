@@ -48,7 +48,7 @@ void deletionFromEnd(Node *&head)
 
 void deletionFromMiddle(int value, Node *&head)
 {
-    Node *prev;
+    Node *prev = head;
     Node *curr = head;
     Node *next;
 
@@ -58,17 +58,22 @@ void deletionFromMiddle(int value, Node *&head)
         return;
     }
 
-    while (curr->data != value )
+    while (curr->next != NULL)
     {
-        if (curr->next == NULL)
+        if (curr->data == value)
+        {
+            next = curr->next;
+            delete curr;
+            prev = next;
             return;
-
-        prev = curr;
-        curr = curr->next;
+        }
+        else
+        {
+            prev = curr;
+            curr = curr->next;
+        }
     }
-    next = curr->next;
-    delete curr;
-    prev = next;
+    return;
 }
 
 void insert(Node *&head, int value)
@@ -119,9 +124,11 @@ int main()
     cout << "Linked List: ";
     printList(head);
 
-    deletionFromStart(head);
-    printList(head);
-    deletionFromEnd(head);
+    // deletionFromStart(head);
+    // printList(head);
+    // deletionFromEnd(head);
+    // printList(head);
+    deletionFromMiddle(10, head);
     printList(head);
 
     return 0;

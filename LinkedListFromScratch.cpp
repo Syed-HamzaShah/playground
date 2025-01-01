@@ -2,31 +2,22 @@
 #include <vector>
 using namespace std;
 
-struct Node
+class Node
 {
     int data;
-    Node *link;
-    Node(int data = 0, Node *link = NULL) {}
-    Node(int d, Node *l = NULL)
-    {
-        data = d;
-    }
-    Node(int d, Node *l)
-    {
-        data = d;
-        link = l;
-    }
+    Node *next;
+};
 
-    void insert(int d, Node *l)
-    {
-        data = d;
-        link = l;
-    }
+class LinkedList
+{
+    Node *head = nullptr;
+
+    LinkedList(int info = 0, Node *link = nullptr) {};
 };
 
 void deletionFromStart(Node *head)
 {
-    if (head->link == NULL)
+    if (head->next == NULL)
     {
         cout << "Deletion Not possible" << endl;
         return;
@@ -98,7 +89,8 @@ int main()
     {
         cout << "Enter the value : ";
         cin >> value;
-        Node = new Node(value,head);}
+        Node = new Node(value, head);
     }
-    return 0;
+}
+return 0;
 }
