@@ -23,10 +23,80 @@ describe class;
 -- insert into class values(4, 'Umar Afridi', 'Software Engineer');
 -- insert into class values(5, 'Faiz Farhar', 'Software Engineer');
 
-insert into class(name) values('Hassan Farooq');
-insert into class(name) values('Hassan Khan');
-insert into class(name) values('Saad Farooq');
+insert into class(name, major) values('Hassan Farooq', 'SE');
+insert into class(name, major) values('Hassan Khan', 'Biology');
+insert into class(name , major) values('Saad Farooq', 'CS');
+
+select * from class;
+
+update class 
+set major = 'Bio'
+where major = 'Biology';
+
+select * from class;
+
+update class
+set major = 'Computer Science'
+where major = 'CS';
+
+update class
+set major = 'Trade King'
+where class_id = 1;
+
+select * from class;
+
+update class
+set major = 'NeuroByte'
+where major = 'Computer Science' or major = 'Bio';
+
+select * from class;
+
+update class
+set name = 'Gey', major = 'Gayness'
+where class_id = 1;
+
+select * from class;
+
+-- update class
+-- set major = 'Undecided';
+
+select * from class;
+
+-- delete from class
+-- where name = 'Gey';
+
+-- delete from class;
+
+-- select name from class order by class_id desc;
+
+select * 
+from class
+order by major, class_id desc;
+
+select * from class limit 2;
+
+select *
+from class
+order by class_id desc
+limit 2;
+
+select * 
+from class
+where major = 'NeuroByte'
+order by class_id desc;
+
+-- <, >, >=, <=, =, <>, AND, OR
+
+select * from class where major <> 'NeuroByte';
+
+update class
+set major = 'Undefined'
+where major = 'Gayness';
+
+select * from class where major = 'Undefined';
+
+select * from class;
 
 select * from class
-
+where class_id in (2,3);
 
