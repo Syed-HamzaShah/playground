@@ -120,3 +120,57 @@ INSERT INTO works_with VALUES(105, 404, 33000);
 INSERT INTO works_with VALUES(107, 405, 26000);
 INSERT INTO works_with VALUES(102, 406, 15000);
 INSERT INTO works_with VALUES(105, 406, 130000);
+
+-- select * from employee;
+
+-- select * from client;
+
+-- select * from works_with;
+
+-- select * from employee order by salary;
+
+-- select * from employee order by salary desc;
+
+-- select * from employee order by sex, first_name, last_name;
+
+-- select * from employee limit 5;
+
+-- select first_name as forename , last_name as surname from employee;
+
+-- select distinct sex from employee;
+
+-- select distinct branch_id from employee;
+
+-- select count(emp_id) from employee;
+
+-- select count(super_id) from employee;
+
+-- select count(emp_id) from employee where sex = 'F' and birth_day > '1971-01-01';
+
+-- select avg(salary) from employee;
+
+-- select sum(salary) from employee;
+
+-- select avg(salary) from employee where sex = 'M';
+
+-- select sum(salary) from employee where sex = 'M';
+
+-- select count(sex) , sex from employee group by sex;
+
+-- select sum(total_sales), emp_id from works_with group by emp_id;
+
+-- % = any # characters, _ = one character 
+
+-- select * from client where client_name like '%LLC';
+
+-- select * from branch_supplier where supplier_name like '% Labels%';
+
+-- select * from employee where birth_day like '____-10%';
+
+-- select * from client where client_name like '%school%';
+
+-- select first_name from employee union select branch_name from branch;
+
+-- select client_name, client.branch_id from client union select supplier_name, branch_supplier.branch_id from branch_supplier;
+
+-- select salary from employee union select total_sales from works_with;
