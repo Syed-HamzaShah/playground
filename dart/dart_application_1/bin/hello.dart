@@ -1,5 +1,5 @@
-import 'dart:core';
-import 'dart:io';
+// import 'dart:core';
+// import 'dart:io';
 
 // void main(List<String> arguments) {
 //   // print('Hello World!');
@@ -252,4 +252,127 @@ main() {
   //   if (i % 2 == 0) continue;
   //   print('Odd: $i');
   // }
+
+  //List
+  // List names = ['Jack', 'Jill'];
+  // print(names[1]);
+  // print(names.length);
+
+  // var names2 = ['Jack', 'Jill'];
+
+  // for (var n in names2) {
+  //   print(n);
+  // }
+
+  // var names3 = ['Jack', 'Jill', 10, 100.1];
+  // for (var n in names3) {
+  //   print(n);
+  // }
+
+  // List<String> names4 = ['Jack', 'Jill'];
+  // // List<String> names4 =const ['Jack', 'Jill'];
+  // names4.add('John');
+
+  // for (var n in names4) {
+  //   print(n);
+  // }
+
+  // var names5 = names4;
+  // var names6 = [...names4];
+
+  //Set
+  // var halogens = {'fluorine', 'chlorine', 'fluorine'};
+  // for (var x in halogens) {
+  //   print(x);
+  // }
+
+  //print(halogens.runtimeType);
+
+  // var elements = <String>{};
+  // elements.add('fluorine');
+  // elements.add('chlorine');
+  // elements.add('fluorine');
+  // for (var x in elements) {
+  //   print(x);
+  // }
+
+  //print(halogens.runtimeType);
+
+  // Set <String> names = {};
+  // names.add('Hamza');
+
+  // for (var n in names) {
+  //   print(n);
+  // }
+
+  // print(names.runtimeType);
+
+  //Map
+  // var gifts = {
+  //   // Key:    Value
+  //   'first': 'partridge',
+  //   'second': 'turtledoves',
+  //   'fifth': 'golden rings'
+  // };
+
+  // print(gifts['fifth']);
+
+  // var gifts = {
+  //   // Key:    Value
+  //   2: 'partridge',
+  //   1: 'turtledoves',
+  //   3: 'golden rings'
+  // };
+
+  // print(gifts[1]);
+
+  // var gifts = Map();
+  // gifts['first'] = 'Mango';
+  // gifts['second'] = 'Apple';
+  // gifts['third'] = 'Banana';
+
+  // print(gifts['third']);
+
+  // for (var key in gifts.keys) {
+  //   print(key);
+  // }
+
+  // for (var value in gifts.values) {
+  //   print(value);
+  // }
+
+  // gifts.forEach((key, value) => print('Key: $key, Value: $value'));
+
+  // var gifts2 = {'first': 'Mango', 'second': 'Apple', 'third': 'Banana'};
+  // print(gifts2['third']);
+  // print(gifts2.length);
+  // print(gifts2.isEmpty);
+  // print(gifts2.isNotEmpty);
+  // gifts2.clear();
+  // print(gifts2.isEmpty);
+  // print(gifts2.isNotEmpty);
+
+  // showOutput(square(2));
+  // showOutput(square(2.5));
+
+  // print(square.runtimeType);
+
+  
 }
+
+//Arrow Function
+// dynamic square(var num) => num * num;
+
+//Function
+
+// void greet() {
+//   print('Hello World!');
+// }
+
+// dynamic square(var num) {
+//   return num * num;
+// }
+
+// void showOutput(var msg) {
+//   print(msg);
+// }
