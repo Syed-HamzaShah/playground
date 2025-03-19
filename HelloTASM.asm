@@ -1,7 +1,7 @@
 .MODEL SMALL
 .STACK 100H
 .DATA
-    message DB "Hello, TASM!$"
+    message DB "Hello, Hamza!$"
 
 .CODE
 MAIN PROC
