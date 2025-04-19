@@ -17,6 +17,7 @@
 
 const names = require("./NodeNames.js");
 const SayHi = require("./NodeFunction.js");
-
+const flavor = require("./AlternativeFlavor.js");
+require("./MindGrenade.js");
 SayHi("Saad");
 SayHi("Ali");
