@@ -24,7 +24,7 @@ def get_weather(city):
 
 # Reflex Agent Logic
 def rain_detector_agent(weather_condition):
-    if weather_condition in ["Rain", "Drizzle", "Thunderstorm"]:
+    if weather_condition in ["Rain", "Drizzle", "Thunderstorm", "Light Run", "Heavy Rain", "Snow" , "Very Light Rain"]:
         return "Close Window"
     else:
         return "Open Window"
@@ -53,7 +53,7 @@ root = tk.Tk()
 root.title("Rain Detector Agent")
 root.geometry("450x350")
 root.configure(bg="#E8F0F2")  # Light blue background
-root.resizable(False, False)
+root.resizable(True, True)
 
 # Title Label
 title_label = tk.Label(root, text="Rain Detector Agent", font=("Helvetica", 20, "bold"), bg="#E8F0F2")
