@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int robotSim(vector<int>& commands, vector<vector<int>>& obstacles) {
+        int x = 0, y = 0;
+        set<pair<int, int>> s;
+
+        for(int i = 0; i < obstacles.size(); i++)
+            s.insert({obstacles[i][0], obstacles[i][1]});
+
+        char direction = 'N'; 
+        int maxDist = 0;
+
+        for(int i = 0; i < commands.size(); i++){
+            
+            if(commands[i] >= 1 && commands[i] <= 9){
+                for(int step = 0; step < commands[i]; step++){
+                    int nx = x;
+                    int ny = y;
+
+                    if(direction == 'N') ny++;
+                    else if(direction == 'S') ny--;
+                    else if(direction == 'E') nx++;
+                    else nx--;
+
+                    if(s.count({nx, ny})) break;
+                    x = nx;
+                    y = ny;
+                    maxDist = max(maxDist, x*x + y*y);
+                }
+            }
+
+            else if(commands[i] == -1){
+                if(direction == 'N') direction = 'E';
+                else if(direction == 'E') direction = 'S';
+                else if(direction == 'S') direction = 'W';
+                else direction = 'N';
+            }
+
+            else if(commands[i] == -2){
+                if(direction == 'N') direction = 'W';
+                else if(direction == 'W') direction = 'S';
+                else if(direction == 'S') direction = 'E';
+                else direction = 'N';
+            }
+        }
+
+        return maxDist;
+    }
+};
